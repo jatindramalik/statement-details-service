@@ -4,10 +4,13 @@
  */
 package com.keybank.statement.model;
 
+import lombok.Data;
+
 /**
  * @author jatin, 21-Oct-2022
  * Description:
  */
+@Data
 public class StatementDetailsRequest {
 
     private CustomerDetails CustomerDetails;

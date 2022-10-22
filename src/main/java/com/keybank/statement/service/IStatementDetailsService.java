@@ -4,10 +4,15 @@
  */
 package com.keybank.statement.service;
 
+import com.keybank.statement.model.StatementDetailsRequest;
+import com.keybank.statement.model.StatementDetailsResponse;
+
 /**
  * @author jatin, 21-Oct-2022
  * Description:
  */
 public interface IStatementDetailsService {
+
+    public StatementDetailsResponse getStatementDetails(StatementDetailsRequest statementDetailsRequest);
 
 }

@@ -4,10 +4,16 @@
  */
 package com.keybank.statement.serviceclient;
 
+import com.keybank.statement.model.CardVerifyServiceRequest;
+import com.keybank.statement.model.CardVerifyServiceResponse;
+
 /**
  * @author jatin, 21-Oct-2022
  * Description:
  */
 public interface ICardVerifyServiceClient {
+
+    CardVerifyServiceResponse verifyCardDetails(CardVerifyServiceRequest request);
+
 
 }

@@ -4,10 +4,20 @@
  */
 package com.keybank.statement.builder;
 
+import com.keybank.statement.model.CardVerifyServiceResponse;
+import com.keybank.statement.model.StatementDetailsDaoResponse;
+import com.keybank.statement.model.StatementDetailsResponse;
+
 /**
  * @author jatin, 21-Oct-2022
  * Description:
  */
 public class StatementDetailsResponseBuilder {
+
+    public StatementDetailsResponse buildServiceResponse(StatementDetailsDaoResponse daoResponse, CardVerifyServiceResponse cardVerifyServiceResponse) {
+
+        //TODO: prepare the StatementDetailsResponse object with the help of daoResponse and cardVerifyServiceResponse
+        return null;
+    }
 
 }

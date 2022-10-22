@@ -4,10 +4,18 @@
  */
 package com.keybank.statement.model;
 
+import java.util.List;
+
+import lombok.Data;
+
 /**
  * @author jatin, 21-Oct-2022
  * Description:
  */
+@Data
 public class StatementDetailsResponse {
+
+    private StatusBlock status_block;
+    private List<StatementDetails> statementDetails;
 
 }

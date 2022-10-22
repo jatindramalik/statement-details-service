@@ -4,10 +4,15 @@
  */
 package com.keybank.statement.dao;
 
+import com.keybank.statement.model.StatementDetailsDaoRequest;
+import com.keybank.statement.model.StatementDetailsDaoResponse;
+
 /**
  * @author jatin, 21-Oct-2022
  * Description:
  */
 public interface IStatementDetailsDao {
+
+    StatementDetailsDaoResponse getStatementDetails(StatementDetailsDaoRequest daoRequest);
 
 }

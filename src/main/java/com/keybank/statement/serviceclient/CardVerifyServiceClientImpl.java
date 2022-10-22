@@ -4,10 +4,20 @@
  */
 package com.keybank.statement.serviceclient;
 
+import com.keybank.statement.model.CardVerifyServiceRequest;
+import com.keybank.statement.model.CardVerifyServiceResponse;
+
 /**
  * @author jatin, 21-Oct-2022
  * Description:
  */
-public class CardVerifyServiceClientImpl {
+public class CardVerifyServiceClientImpl implements ICardVerifyServiceClient {
+
+    @Override
+    public CardVerifyServiceResponse verifyCardDetails(CardVerifyServiceRequest request) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
 
 }

@@ -1,5 +1,8 @@
 package com.keybank.statement.model;
 
+import lombok.Data;
+
+@Data
 public class RequsestInfo {
 
     private String transType;
