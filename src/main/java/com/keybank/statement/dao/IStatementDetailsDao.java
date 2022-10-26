@@ -4,6 +4,8 @@
  */
 package com.keybank.statement.dao;
 
+import com.keybank.statement.exception.BusinessException;
+import com.keybank.statement.exception.SystemException;
 import com.keybank.statement.model.StatementDetailsDaoRequest;
 import com.keybank.statement.model.StatementDetailsDaoResponse;
 
@@ -13,6 +15,6 @@ import com.keybank.statement.model.StatementDetailsDaoResponse;
  */
 public interface IStatementDetailsDao {
 
-    StatementDetailsDaoResponse getStatementDetails(StatementDetailsDaoRequest daoRequest);
+    StatementDetailsDaoResponse getStatementDetails(StatementDetailsDaoRequest daoRequest) throws SystemException, BusinessException;
 
 }

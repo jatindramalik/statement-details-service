@@ -4,12 +4,15 @@
  */
 package com.keybank.statement.validator;
 
+import org.springframework.stereotype.Component;
+
 import com.keybank.statement.model.StatementDetailsRequest;
 
 /**
  * @author jatin, 21-Oct-2022
  * Description:
  */
+@Component
 public class StatementDetailsValidator {
 
     public void validateRequest(StatementDetailsRequest statementDetailsRequest) {

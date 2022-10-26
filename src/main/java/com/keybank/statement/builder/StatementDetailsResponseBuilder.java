@@ -4,6 +4,8 @@
  */
 package com.keybank.statement.builder;
 
+import org.springframework.stereotype.Component;
+
 import com.keybank.statement.model.CardVerifyServiceResponse;
 import com.keybank.statement.model.StatementDetailsDaoResponse;
 import com.keybank.statement.model.StatementDetailsResponse;
@@ -12,6 +14,7 @@ import com.keybank.statement.model.StatementDetailsResponse;
  * @author jatin, 21-Oct-2022
  * Description:
  */
+@Component
 public class StatementDetailsResponseBuilder {
 
     public StatementDetailsResponse buildServiceResponse(StatementDetailsDaoResponse daoResponse, CardVerifyServiceResponse cardVerifyServiceResponse) {

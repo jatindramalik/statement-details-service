@@ -4,6 +4,8 @@
  */
 package com.keybank.statement.serviceclient;
 
+import org.springframework.stereotype.Component;
+
 import com.keybank.statement.model.CardVerifyServiceRequest;
 import com.keybank.statement.model.CardVerifyServiceResponse;
 
@@ -11,6 +13,7 @@ import com.keybank.statement.model.CardVerifyServiceResponse;
  * @author jatin, 21-Oct-2022
  * Description:
  */
+@Component
 public class CardVerifyServiceClientImpl implements ICardVerifyServiceClient {
 
     @Override
