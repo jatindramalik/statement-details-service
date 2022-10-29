@@ -25,8 +25,16 @@ public class StatementDetailsRequestBuilder {
 
     public StatementDetailsDaoRequest buildDaoRequest(StatementDetailsRequest statementDetailsRequest) {
 
-        //TODO : Prepare StatementDetailsDaoRequest object with the help of StatementDetailsRequest object
-        return null;
+        StatementDetailsDaoRequest daoRequest = new StatementDetailsDaoRequest();
+        daoRequest.setCardnum(statementDetailsRequest.getCustomerDetails().getCardNum());
+        daoRequest.setClientId("web");
+        daoRequest.setCvv(statementDetailsRequest.getCustomerDetails().getCvv());
+        daoRequest.setExpDate(statementDetailsRequest.getCustomerDetails().getExpDate());
+        daoRequest.setNameOnCard(statementDetailsRequest.getCustomerDetails().getNameOnCard());
+        daoRequest.setStDate(statementDetailsRequest.getCustomerDetails().getStDate());
+        daoRequest.setEdDate(statementDetailsRequest.getCustomerDetails().getEdDate());
+        
+        return daoRequest;
     }
 
 }

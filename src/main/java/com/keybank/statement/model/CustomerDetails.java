@@ -9,5 +9,7 @@ public class CustomerDetails {
     private String cvv;
     private String nameOnCard;
     private String expDate;
+    private String stDate;
+    private String edDate;
 
 }

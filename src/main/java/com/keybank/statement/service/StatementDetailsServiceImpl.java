@@ -10,6 +10,8 @@ import org.springframework.stereotype.Component;
 import com.keybank.statement.builder.StatementDetailsRequestBuilder;
 import com.keybank.statement.builder.StatementDetailsResponseBuilder;
 import com.keybank.statement.dao.IStatementDetailsDao;
+import com.keybank.statement.exception.BusinessException;
+import com.keybank.statement.exception.SystemException;
 import com.keybank.statement.model.CardVerifyServiceRequest;
 import com.keybank.statement.model.CardVerifyServiceResponse;
 import com.keybank.statement.model.StatementDetailsDaoRequest;
@@ -38,7 +40,7 @@ public class StatementDetailsServiceImpl implements IStatementDetailsService {
     StatementDetailsResponseBuilder statementDetailsResponseBuilder;
 
     @Override
-    public StatementDetailsResponse getStatementDetails(StatementDetailsRequest statementDetailsRequest) {
+    public StatementDetailsResponse getStatementDetails(StatementDetailsRequest statementDetailsRequest) throws SystemException, BusinessException {
 
         //1.Get the request from controller
 
@@ -59,6 +61,8 @@ public class StatementDetailsServiceImpl implements IStatementDetailsService {
       //6. call dao by passing daoRequest and get the daoResponse
 
       StatementDetailsDaoResponse daoResponse = statementDetailsDao.getStatementDetails(daoRequest);
+
+      System.out.println("daoResponse is : " + daoResponse);
 
       //Prepare the StatementDetailsResponse response with the help of dao response and serviceclient resp
 

@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.keybank.statement.exception.BusinessException;
+import com.keybank.statement.exception.SystemException;
 import com.keybank.statement.model.StatementDetailsRequest;
 import com.keybank.statement.model.StatementDetailsResponse;
 import com.keybank.statement.service.IStatementDetailsService;
@@ -34,7 +36,7 @@ public class StatementDetailsController {
     public StatementDetailsResponse getStatementDetails(@RequestBody StatementDetailsRequest statementDetailsRequest,
                                                         @RequestHeader("client_id")String clientId,
                                                         @RequestHeader("request_id")String requestId,
-                                                        @RequestHeader("msg_ts") String messageTs){
+                                                        @RequestHeader("msg_ts") String messageTs) throws SystemException, BusinessException{
         
         //1.Get the request from the client/consumer
         //2.validate the request

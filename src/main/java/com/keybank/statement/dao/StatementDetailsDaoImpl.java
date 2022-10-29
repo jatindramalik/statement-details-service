@@ -22,9 +22,9 @@ import com.keybank.statement.model.StatementDetailsDaoResponse;
  * Description:
  */
 @Component
-public class StatementDetailsDaoImpl implements IStatementDetailsDao {
+public class StatementDetailsDaoImpl {
 
-    @Override
+    
     public StatementDetailsDaoResponse getStatementDetails(StatementDetailsDaoRequest daoRequest) {
 
         StatementDetailsDaoResponse statementDetailsDaoResponse = new StatementDetailsDaoResponse();

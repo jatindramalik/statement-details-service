@@ -15,6 +15,7 @@ import org.springframework.jdbc.core.SqlParameter;
 import org.springframework.jdbc.core.SqlReturnResultSet;
 import org.springframework.jdbc.object.StoredProcedure;
 import org.springframework.lang.Nullable;
+import org.springframework.stereotype.Component;
 
 import com.keybank.statement.exception.BusinessException;
 import com.keybank.statement.exception.SystemException;
@@ -26,6 +27,7 @@ import com.keybank.statement.model.StatementDetailsDaoResponse;
  * @author jatin, 21-Oct-2022
  * Description: Here JdbcTemplet is used to call stored procedure
  */
+@Component
 public class StatementDetailsSpringJdbcImpl extends StoredProcedure implements IStatementDetailsDao,RowMapper<StatementDaoDetails> {
 
     public StatementDetailsSpringJdbcImpl(JdbcTemplate jdbcTemplate){
@@ -105,6 +107,7 @@ public class StatementDetailsSpringJdbcImpl extends StoredProcedure implements I
                 daoResp.setRespCode(dbRespCode);
                 daoResp.setRespMsg(dbRespMsg);
                 daoResp.setStatementDetails(statementDetails);
+
             }else if("100".equals(dbRespCode) || "101".equals(dbRespCode) || "102".equals(dbRespCode) || "103".equals(dbRespCode)){
                 throw new BusinessException(dbRespCode, dbRespMsg);
     
@@ -117,7 +120,7 @@ public class StatementDetailsSpringJdbcImpl extends StoredProcedure implements I
             
         } catch (DataAccessException de) {
             de.printStackTrace();
-            throw de;
+            throw new SystemException("001","data access exception");
         }catch (BusinessException be) {
             be.printStackTrace();
             throw be;

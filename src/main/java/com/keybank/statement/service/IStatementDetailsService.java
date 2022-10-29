@@ -4,6 +4,8 @@
  */
 package com.keybank.statement.service;
 
+import com.keybank.statement.exception.BusinessException;
+import com.keybank.statement.exception.SystemException;
 import com.keybank.statement.model.StatementDetailsRequest;
 import com.keybank.statement.model.StatementDetailsResponse;
 
@@ -13,6 +15,6 @@ import com.keybank.statement.model.StatementDetailsResponse;
  */
 public interface IStatementDetailsService {
 
-    public StatementDetailsResponse getStatementDetails(StatementDetailsRequest statementDetailsRequest);
+    public StatementDetailsResponse getStatementDetails(StatementDetailsRequest statementDetailsRequest)throws SystemException, BusinessException;
 
 }
