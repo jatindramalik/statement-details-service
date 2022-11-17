@@ -3,7 +3,7 @@ package com.keybank.statement.model;
 import lombok.Data;
 
 @Data
-public class RequsestInfo {
+public class RequestInfo {
 
     private String transType;
     private boolean isSorting;

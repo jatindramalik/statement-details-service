@@ -19,8 +19,17 @@ public class StatementDetailsRequestBuilder {
 
     public CardVerifyServiceRequest buildServiceClientRequest(StatementDetailsRequest statementDetailsRequest) {
 
-        //TODO: Prepare crdVerifyServiceRequest object with the help of StatementDetailsRequest object
-        return null;
+        
+        System.out.println("Entered into buildServiceClientRequest");
+
+        CardVerifyServiceRequest cardServiceRequest = new CardVerifyServiceRequest();
+        cardServiceRequest.setCardNum(statementDetailsRequest.getCustomerDetails().getCardNum());
+        cardServiceRequest.setCvv(statementDetailsRequest.getCustomerDetails().getCvv());
+        cardServiceRequest.setExpDate(statementDetailsRequest.getCustomerDetails().getExpDate());
+        cardServiceRequest.setNameOnCard(statementDetailsRequest.getCustomerDetails().getNameOnCard());
+        
+        
+        return cardServiceRequest;
     }
 
     public StatementDetailsDaoRequest buildDaoRequest(StatementDetailsRequest statementDetailsRequest) {

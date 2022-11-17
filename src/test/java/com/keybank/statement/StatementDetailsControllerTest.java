@@ -38,7 +38,7 @@ import lombok.SneakyThrows;
 @ExtendWith(SpringExtension.class)
 @WebMvcTest(StatementDetailsController.class)
 @ContextConfiguration(classes = {StatementDetailsController.class})
-
+@ExtendWith(SpringExtension.class)
 public class StatementDetailsControllerTest {
 
 

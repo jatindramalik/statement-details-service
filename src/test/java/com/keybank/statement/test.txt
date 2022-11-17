@@ -1,0 +1,5 @@
+Field statementDetailsRequestBuilder in com.keybank.statement.service.StatementDetailsServiceImpl 
+required a bean of type 'com.keybank.statement.builder.StatementDetailsRequestBuilder' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)

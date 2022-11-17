@@ -5,9 +5,9 @@ import lombok.Data;
 @Data
 public class CardVerifyServiceResponse {
 
-    private String customerName;
+    private String respCode;
     private String status;
-    private boolean isPastDue;
+    private String respMsg;
     
     
 }

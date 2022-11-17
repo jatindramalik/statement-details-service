@@ -4,7 +4,7 @@
  */
 package com.keybank.statement.model;
 
-import java.util.Date;
+
 
 import lombok.Data;
 
@@ -17,7 +17,7 @@ public class StatementDetailsRequest {
 
     private CustomerDetails CustomerDetails;
     private DateRange dateRange;
-    private RequsestInfo requestInfo;
+    private RequestInfo requestInfo;
    
 
 }

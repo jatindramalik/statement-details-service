@@ -27,7 +27,7 @@ import com.keybank.statement.serviceclient.ICardVerifyServiceClient;
 @Component
 public class StatementDetailsServiceImpl implements IStatementDetailsService {
 
-    @Autowired
+    @Autowired(required = true)
     StatementDetailsRequestBuilder statementDetailsRequestBuilder;
 
     @Autowired
@@ -57,10 +57,13 @@ public class StatementDetailsServiceImpl implements IStatementDetailsService {
       //5. Prepare the request for dao with the help of statementDetaislRequest object
 
       StatementDetailsDaoRequest daoRequest = statementDetailsRequestBuilder.buildDaoRequest(statementDetailsRequest);
-
+      StatementDetailsDaoResponse daoResponse = null;
       //6. call dao by passing daoRequest and get the daoResponse
+      if(cardVerifyServiceResponse !=null && "0".equals(cardVerifyServiceResponse.getRespCode())){
+        daoResponse = statementDetailsDao.getStatementDetails(daoRequest);
 
-      StatementDetailsDaoResponse daoResponse = statementDetailsDao.getStatementDetails(daoRequest);
+      }
+
 
       System.out.println("daoResponse is : " + daoResponse);
 
